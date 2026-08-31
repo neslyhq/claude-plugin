@@ -1,0 +1,13 @@
+{
+  "name": "nesly",
+  "version": "0.1.0",
+  "description": "Deploy applications to nesly from Claude Code: MCP tools for deploy, logs, env, addons and domains, plus a skill that teaches the deploy workflow.",
+  "author": {
+    "name": "nesly",
+    "url": "https://nesly.net"
+  },
+  "homepage": "https://nesly.net/docs/agents/",
+  "repository": "https://github.com/neslyhq/claude-plugin",
+  "license": "MIT",
+  "keywords": ["deploy", "hosting", "paas", "mcp"]
+}

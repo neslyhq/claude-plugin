@@ -1,0 +1,15 @@
+{
+  "name": "nesly",
+  "description": "Official nesly plugins: deploy applications to nesly from Claude Code.",
+  "owner": {
+    "name": "nesly",
+    "url": "https://nesly.net"
+  },
+  "plugins": [
+    {
+      "name": "nesly",
+      "source": "./",
+      "description": "Deploy applications to nesly from Claude Code: MCP tools for deploy, logs, env, addons and domains, plus a skill that teaches the deploy workflow."
+    }
+  ]
+}
