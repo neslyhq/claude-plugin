@@ -9,7 +9,8 @@
     {
       "name": "nesly",
       "source": "./",
-      "description": "Deploy applications to nesly from Claude Code: MCP tools for deploy, logs, env, addons and domains, plus a skill that teaches the deploy workflow."
+      "version": "0.1.5",
+      "description": "Deploy applications to nesly from Claude Code: MCP tools for deploy, logs, env, addons and domains, plus deploy, debug, and rollback skills."
     }
   ]
 }

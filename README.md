@@ -5,9 +5,10 @@ Claude Code. One install brings:
 
 - **MCP tools** — deploy, diagnose, logs, env, addons, domains,
   rollback, usage — backed by the `nesly` CLI's credentials.
-- **A deploy skill** — Claude knows the platform's contract
-  (`$PORT`, `0.0.0.0`), the build detection, and the
-  diagnose-first loop for failed deploys.
+- **Skills** — **deploy** (already-live check, build detection),
+  **debug** skill (diagnose first, then traffic failures / request-id
+  logs), and **rollback** skill (list revisions → instant restore →
+  verify; optional bisect).
 
 ## Install
 
