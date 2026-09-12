@@ -1,5 +1,5 @@
-Score 1.0 only if the answer gets all three of these right; subtract
-about a third for each miss:
+Score 1.0 only if the answer gets all four of these right; subtract
+about a quarter for each miss:
 
 1. **The deploy command is `nesly deploy`** (from the project
    directory; `--json` optional). Inventing other commands or a web
@@ -13,5 +13,9 @@ about a third for each miss:
 3. **Failure path starts with `nesly diagnose`** (or the
    diagnose_deployment MCP tool) — NOT with reading raw logs; raw logs
    are the fallback when the diagnosis is not enough.
+4. **Already-live check**: before deploying on a “publish” request, the
+   agent looks up the project (`get_project` / `project info` / link /
+   `list_projects`) and, if a live URL exists, tells the user that URL
+   and that deploy will publish a **new revision**, not a first publish.
 
 Wrong or fabricated flags and commands cap the score at 0.4.
