@@ -11,6 +11,13 @@ names the likely cause.
 Use the `nesly` CLI (`--json` on every command) or the matching MCP
 tools. Same credentials either way.
 
+## Auth first (mandatory)
+
+Call `whoami` (MCP or `nesly whoami --json`) before diagnose/logs. If not
+signed in: stop; tell the user `nesly login` then `nesly mcp setup` and
+restart the agent. Do not invent another host or paste tokens. On MCP
+401: stop retrying MCP; use the CLI in the same turn.
+
 ## 1. Resolve the project
 
 `.nesly/project.json`, or `nesly project info --json` /
@@ -25,7 +32,7 @@ nesly diagnose --json
 
 MCP: `diagnose_deployment`.
 
-It returns probable cause, evidence lines, missing env vars, and a
+It returns probable cause, supporting log lines, missing env vars, and a
 fix command per finding. Apply those fixes before inventing a theory.
 
 Skipping diagnose for a failed or unhealthy deployment is a
@@ -85,6 +92,6 @@ asks for a paid warm plan.
 
 ## Done when
 
-- You stated the cause with evidence (diagnose finding or traffic row)
+- You stated the cause with a diagnose finding or traffic row
 - You applied a concrete fix (or explained why rollback came first)
 - A follow-up diagnose / traffic check shows the symptom gone or reduced

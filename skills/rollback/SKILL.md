@@ -9,6 +9,12 @@ Rollback **repoints traffic** at a deployment that already exists.
 There is no rebuild. Prefer this when production is broken and service
 must come back before a code fix.
 
+## Auth first (mandatory)
+
+Call `whoami` before listing deployments or rolling back. If not signed
+in: stop; `nesly login` + `nesly mcp setup`, restart the agent. On MCP
+401: stop retrying MCP; use the CLI.
+
 ## 1. Confirm the project and list revisions
 
 ```
