@@ -138,6 +138,8 @@ only if diagnose is not enough.
 
 ## Common follow-ups (details: https://nesly.net/llms.txt)
 
+- How-to questions: `nesly docs <question>` (MCP `search_documentation`) — not `curl llms.txt | grep`
+
 - Env: `nesly env set|ls|rm|pull` — MCP `set_env` / `list_env` / `delete_env` / `pull_env` / …
 - Database: `nesly addon add postgres|mssql` — MCP `add_addon`
 - Rollback: `nesly rollback <id>` — MCP `rollback`
