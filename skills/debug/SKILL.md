@@ -13,10 +13,19 @@ tools. Same credentials either way.
 
 ## Auth first (mandatory)
 
-Call `whoami` (MCP or `nesly whoami --json`) before diagnose/logs. If not
-signed in: stop; tell the user `nesly login` then `nesly mcp setup` and
-restart the agent. Do not invent another host or paste tokens. On MCP
-401: stop retrying MCP; use the CLI in the same turn.
+Call `whoami` (MCP or `nesly whoami --json`) before diagnose/logs. If
+`signed_in` is false, branch on `reason`: `api-unreachable`
+(`retryable: true`) means the session is stored and the API went quiet —
+wait and retry whoami, never ask for a login; `no-credential`,
+`rejected` or `credential-unreadable` means run `nesly login` yourself
+(it opens the browser, the person only approves; the command bounds its
+own wait, so do not wrap it in `timeout` — stock macOS has no such
+command), and only tell them to run `nesly login` + `nesly mcp setup` and
+restart the agent if the CLI is absent or login errors out;
+`account-mismatch` is an
+account selection, not a session (`nesly account ls`). Do not invent
+another host or paste tokens. On MCP 401: stop retrying MCP; use the CLI
+in the same turn.
 
 ## 1. Resolve the project
 

@@ -11,9 +11,15 @@ must come back before a code fix.
 
 ## Auth first (mandatory)
 
-Call `whoami` before listing deployments or rolling back. If not signed
-in: stop; `nesly login` + `nesly mcp setup`, restart the agent. On MCP
-401: stop retrying MCP; use the CLI.
+Call `whoami` before listing deployments or rolling back. If `signed_in`
+is false, read `reason`: `api-unreachable` (`retryable: true`) is a
+stored session and a quiet API — retry whoami, do not ask for a login;
+`no-credential` / `rejected` / `credential-unreadable` — run
+`nesly login` yourself (it opens the browser; it bounds its own wait, so
+no `timeout` wrapper, which stock macOS does not have) and retry, and
+only ask the user for `nesly login` + `nesly mcp setup` + restart if that
+fails; `account-mismatch` is the wrong account, not a lost session. On
+MCP 401: stop retrying MCP; use the CLI.
 
 ## 1. Confirm the project and list revisions
 
