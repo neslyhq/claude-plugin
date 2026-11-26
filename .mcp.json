@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "nesly-platform": {
+    "nesly": {
       "command": "nesly",
       "args": ["mcp"]
     }

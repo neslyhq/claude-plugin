@@ -5,7 +5,8 @@ Claude Code. One install brings:
 
 - **MCP tools** — deploy, diagnose, logs, env, addons, domains,
   rollback, usage — backed by the `nesly` CLI's credentials.
-- **Skills** — **deploy** (already-live check, build detection),
+- **Skills** — **setup** (install, sign-in), **deploy** (already-live
+  check, preview first, the wait/diagnose/repair loop),
   **debug** skill (diagnose first, then traffic failures / request-id
   logs), and **rollback** skill (list revisions → instant restore →
   verify; optional bisect).

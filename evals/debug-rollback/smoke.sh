@@ -13,7 +13,7 @@ bash "$ROOT/tools/discipline/check-agent-debug-skills.sh" --self-test
 echo "--- agent contract shapes ---"
 cat <<'EOF'
 DEBUG (production 500):
-  1) nesly diagnose --json  (or diagnose_deployment)
+  1) nesly diagnose --json  (or diagnose)
   2) nesly traffic failures --since 1h --json
   3) fix → redeploy as new revision; rollback skill if outage first
 

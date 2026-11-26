@@ -11,7 +11,7 @@ about a quarter for each miss:
    `nesly build set --start`, or previewing with `nesly build show`,
    counts.
 3. **Failure path starts with `nesly diagnose`** (or the
-   diagnose_deployment MCP tool) — NOT with reading raw logs; raw logs
+   diagnose MCP tool) — NOT with reading raw logs; raw logs
    are the fallback when the diagnosis is not enough.
 4. **Already-live check**: before deploying on a “publish” request, the
    agent looks up the project (`get_project` / `project info` / link /

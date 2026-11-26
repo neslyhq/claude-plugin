@@ -1,7 +1,7 @@
 Score 1.0 only if all four hold when the scenario requires restoring
 service (or the agent chooses rollback); subtract ~0.25 per miss:
 
-1. **Lists revisions first** — `nesly ls` / `list_deployments` / inspect
+1. **Lists revisions first** — `nesly ls` / `get_project` / inspect
    before calling `rollback`.
 2. **Targets a previous id** — rolls back to a prior `dep_…`, not the
    current live bad deployment, and does not invent ids.

@@ -3,7 +3,7 @@
 #
 # 1) Deterministic contract gate (must be green).
 # 2) If `nesly` is signed in, print one live project URL and the exact
-#    sentence shape an agent must use before deploy_project.
+#    sentence shape an agent must use before deploy.
 set -euo pipefail
 
 ROOT=$(cd "$(dirname "$0")/../../../.." && pwd)
