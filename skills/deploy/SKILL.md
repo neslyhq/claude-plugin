@@ -42,10 +42,10 @@ upgrade nesly`) and retry; still unknown, `nesly build show --json`. Then:
    a value (.env.example, compose, app.json); NEVER search this machine for one.
 2. Compose is refused on purpose (`refused[]`): never translate it by hand.
    A worker the app's own docs name: `nesly build set --worker name="cmd"`.
-3. Memory starts at 512 MiB. On "out of memory" (exit 137) the message names
-   the limit, its source and the plan ceiling: `nesly build set --memory 1Gi`
-   up to that ceiling; tell the person when only a larger plan raises it.
-4. Generated secrets: never set or rotate. 5. Destructive actions: phone approval.
+3. Memory is the plan's ceiling unless something set less. On exit 137 the
+   message names the limit, its source and the ceiling: remove a lower
+   `nesly build set --memory`; tell the person when only a larger plan helps.
+4. Never set or rotate generated secrets. 5. Destructive actions: last section.
 
 ## Already live? (mandatory before the first deploy in the turn)
 
