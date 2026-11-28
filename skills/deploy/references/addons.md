@@ -22,7 +22,7 @@ history, a file in the repository, or a command line.
 |---|---|
 | `postgres`, `mysql`, `mssql`, `mongo` | `DATABASE_URL` / `MONGODB_URI`, spelled for the driver the build found |
 | `valkey` | `REDIS_URL` / `VALKEY_URL`; keys start with `$REDIS_KEY_PREFIX` when the client can (required until the server is Valkey 9.1; from 9.1 any key name works in the project's own database) |
-| `bucket` | `AWS_*` (S3-compatible) |
+| `bucket` | `AWS_*` (S3-compatible); `--mount <path>` also shows it as a directory (files the app writes to its own disk, e.g. `App_Data`, are kept) |
 | `oidc` | `OIDC_*` (issuer URL, client id and secret) — login for the app |
 | `mail` | `SMTP_URL`, `SMTP_HOST/PORT/USER/PASSWORD/FROM`, `MAIL_*` |
 | `mailapi`, `sms`, `voice`, `whatsapp` | the person's own provider account, below |
